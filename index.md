@@ -25,7 +25,7 @@ Here are some of my noteworthy repositories:
 
 Feel free to explore, contribute, and star the repositories you find interesting!
 
-<-- # My GitHub Repositories
+
 
 {% for repo in site.github.public_repositories %}
   <div class="repo-item">
@@ -34,4 +34,4 @@ Feel free to explore, contribute, and star the repositories you find interesting
     </h3>
     <p class="repo-description">{{ repo.description | default: 'No description provided.' }}</p>
   </div>
-{% endfor %} -->
+{% endfor %} 
