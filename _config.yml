@@ -1,13 +1,4 @@
-remote_theme: pages-themes/cayman@v0.2.0
-plugins:
-- jekyll-remote-theme
 
-title: "Amimul Ihsan"
-description: "You can find an overview of all my repositories here."
-
-sdconfig:
-  profile: https://github.com/amihsan
-  repositories: https://github.com/amihsan?tab=repositories
 
 
 
