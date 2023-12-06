@@ -3,7 +3,7 @@ layout: default
 title: Amimul Ihsan
 ---
 
-# Welcome to My GitHub Repositories
+# 👋 Welcome to My GitHub Repositories!
 
 Here are some of my noteworthy repositories:
 
@@ -21,8 +21,9 @@ Here are some of my noteworthy repositories:
 - [**Study**](https://github.com/amihsan/Study): For Personal Learning
 
 🚀 **Explore more on [GitHub](https://github.com/amihsan?tab=repositories)** 🚀
+
 👉 **[View my GitHub Profile](https://github.com/amihsan)** 👈
 
-Feel free to explore, contribute, and star the repositories you find interesting!
+Feel free to explore, contribute, and star the repositories you find interesting! 🌟
 
 
