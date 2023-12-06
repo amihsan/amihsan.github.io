@@ -1,6 +1,6 @@
 ---
 layout: default
-title: My GitHub Repositories
+title: Amimul Ihsan
 ---
 
 # My GitHub Repositories
