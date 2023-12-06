@@ -15,7 +15,7 @@ Here are some of my noteworthy repositories:
 - [**forkify-app**](https://github.com/amihsan/forkify-app): A recipe application built with JavaScript and the Food2Fork API.
 - [**react-auth**](https://github.com/amihsan/react-auth): Authentication example using React.
 - [**next-js**](https://github.com/amihsan/next-js): The React framework for production.
-- [**travos_model**](https://github.com/amihsan/travos_model): A model for evaluating Trust!
+- [**travos-model**](https://github.com/amihsan/travos-model): A model for evaluating Trust!
 - [**expense-tracker-react**](https://github.com/amihsan/expense-tracker-react): Track your expenses with React.
 - [**investment-calculator-react**](https://github.com/x/investment-calculator-react): Calculate your investments using React.
 - [**Study**](https://github.com/amihsan/Study): For Personal Learning
