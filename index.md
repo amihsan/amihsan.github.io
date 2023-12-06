@@ -17,4 +17,6 @@ Here are some of my noteworthy repositories:
 
 Feel free to explore, contribute, and star the repositories you find interesting!
 
+**[View All Repositories on GitHub](https://github.com/amihsan?tab=repositories)**
+
 
