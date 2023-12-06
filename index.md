@@ -1,5 +1,3 @@
-
-
 Here are some of my noteworthy repositories:
 
 - [**amazon-react-clone**](https://github.com/amihsan/amazon-react-clone): React clone of the Amazon website.
