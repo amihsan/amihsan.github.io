@@ -1,4 +1,5 @@
-theme: minimal-mistakes-jekyll
+_themes/
+  minimal-mistakes-jekyll/
 
 
 
