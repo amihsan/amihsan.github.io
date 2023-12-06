@@ -1,4 +1,6 @@
-
+---
+layout: default
+---
 
 # Your GitHub Repositories
 
@@ -32,6 +34,3 @@
     })
     .catch(error => console.error('Error fetching repositories:', error));
 </script>
-
-
-
