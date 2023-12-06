@@ -8,3 +8,6 @@ description: "You can find an overview of all my repositories here."
 sdconfig:
   profile: https://github.com/amihsan
   repositories: https://github.com/amihsan?tab=repositories
+
+ <a href="{{ site.sdconfig.repositories }}" target="_blank" class="btn">View Repositories at GitHub</a>
+      <a href="{{ site.sdconfig.profile }}" target="_blank" class="btn">View my GitHub Profile</a>
