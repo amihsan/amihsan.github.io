@@ -1,9 +1,9 @@
 ---
 layout: default
-title: Your GitHub Repositories
+title: My GitHub Repositories
 ---
 
-# Your GitHub Repositories
+# My GitHub Repositories
 
 {% for repo in site.github.public_repositories %}
   <div class="repo-item">
