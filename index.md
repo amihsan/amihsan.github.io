@@ -17,7 +17,7 @@ Here are some of my noteworthy repositories:
 - [**next-js**](https://github.com/amihsan/next-js): The React framework for production.
 - [**travos-model**](https://github.com/amihsan/travos-model): A model for evaluating Trust!
 - [**expense-tracker-react**](https://github.com/amihsan/expense-tracker-react): Track your expenses with React.
-- [**investment_calculator_react**](https://github.com/amihsan/investment_calculator_react): Calculate your investments using React.
+- [**investment-calculator-react**](https://github.com/amihsan/investment-calculator-react): Calculate your investments using React.
 - [**Study**](https://github.com/amihsan/Study): For Personal Learning
 
 🚀 **Explore more on [GitHub](https://github.com/amihsan?tab=repositories)** 🚀
