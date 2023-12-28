@@ -7,7 +7,6 @@ title: Amimul Ihsan
 
 Here are some of my noteworthy repositories:
 
-
 - [**travos_trust_app**](https://github.com/amihsan/travos_trust_app): A Trust Model for Decentralized Web Applications.
 - [**amazon-react-clone**](https://github.com/amihsan/amazon-react-clone): React clone of the Amazon website.
 - [**react-router**](https://github.com/amihsan/react-router): Declarative routing for React.js.
