@@ -7,7 +7,7 @@ title: Amimul Ihsan
 
 Here are some of my noteworthy repositories:
 
-- [**react-flask-quiz**](https://github.com/amihsan/react-flask-quiz): Einbürgerungstest Quiz App. (German integration test)
+- [**quiz-app**](https://github.com/amihsan/quiz-app): Einbürgerungstest Quiz App. (German integration test)
 - [**travos-trust-app**](https://github.com/amihsan/travos-trust-app): A Trust Model for Decentralized Web Applications.
 - [**amazon-react-clone**](https://github.com/amihsan/amazon-react-clone): React clone of the Amazon website.
 - [**react-router**](https://github.com/amihsan/react-router): Declarative routing for React.js.
