@@ -80,42 +80,6 @@
         <ul id="repos-list"></ul>
     </div>
 
-    <!-- <script>
-        fetch('https://api.github.com/users/amihsan/repos')
-            .then(response => response.json())
-            .then(data => {
-                const repoList = document.getElementById('repos-list');
-                data.forEach(repo => {
-                    const listItem = document.createElement('li');
-                    const title = document.createElement('h2');
-                    const description = document.createElement('p');
-                    const link = document.createElement('a');
-                    title.textContent = repo.name;
-                    description.textContent = repo.description || 'No description available.';
-                    link.href = repo.html_url;
-                    link.textContent = 'View on GitHub';
-                    title.classList.add('repo-title');
-                    description.classList.add('repo-description');
-                    listItem.appendChild(title);
-                    listItem.appendChild(description);
-                    listItem.appendChild(link);
-                    repoList.appendChild(listItem);
-                });
-
-
-                // Enable drag-and-drop functionality
-                const sortable = new Sortable(repoList, {
-                    animation: 150,
-                    onEnd: function (evt) {
-                        // Get the new order of repositories
-                        const repoOrder = Array.from(repoList.children).map(li => li.textContent.trim());
-                        console.log('New order:', repoOrder);
-                        // You can perform further actions here, such as updating the order on the server.
-                    }
-                });
-            })
-            .catch(error => console.error('Error fetching repos:', error));
-    </script> -->
     <script>
         // Function to save the order of repositories to local storage
         function saveRepoOrder() {
