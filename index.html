@@ -29,8 +29,8 @@
             padding: 0;
         }
         li {
-            margin-bottom: 10px;
-            padding: 10px;
+            margin-bottom: 20px;
+            padding: 20px;
             background-color: #f9f9f9;
             border-radius: 5px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -38,6 +38,16 @@
         }
         li:hover {
             background-color: #e9e9e9;
+        }
+        h2 {
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 20px;
+            color: #0366d6;
+        }
+        p {
+            margin-top: 0;
+            color: #555;
         }
         a {
             text-decoration: none;
@@ -62,9 +72,15 @@
                 const repoList = document.getElementById('repo-list');
                 data.forEach(repo => {
                     const listItem = document.createElement('li');
+                    const title = document.createElement('h2');
+                    const description = document.createElement('p');
                     const link = document.createElement('a');
+                    title.textContent = repo.name;
+                    description.textContent = repo.description || 'No description available.';
                     link.href = repo.html_url;
-                    link.textContent = repo.name;
+                    link.textContent = 'View on GitHub';
+                    listItem.appendChild(title);
+                    listItem.appendChild(description);
                     listItem.appendChild(link);
                     repoList.appendChild(listItem);
                 });
