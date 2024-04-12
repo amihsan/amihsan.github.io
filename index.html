@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Public Repositories</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        a {
+            text-decoration: none;
+            color: #0366d6; /* GitHub link color */
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.14.0/Sortable.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>My Public Repositories</h1>
+        <ul id="repo-list"></ul>
+    </div>
+
+    <script>
+        fetch('https://api.github.com/users/amihsan/repos')
+            .then(response => response.json())
+            .then(data => {
+                const repoList = document.getElementById('repo-list');
+                data.forEach(repo => {
+                    const listItem = document.createElement('li');
+                    const link = document.createElement('a');
+                    link.href = repo.html_url;
+                    link.textContent = repo.name;
+                    listItem.appendChild(link);
+                    repoList.appendChild(listItem);
+                });
+
+                // Enable drag-and-drop functionality
+                const sortable = new Sortable(repoList, {
+                    animation: 150,
+                    onEnd: function (evt) {
+                        // Get the new order of repositories
+                        const repoOrder = Array.from(repoList.children).map(li => li.textContent.trim());
+                        console.log('New order:', repoOrder);
+                        // You can perform further actions here, such as updating the order on the server.
+                    }
+                });
+            })
+            .catch(error => console.error('Error fetching repos:', error));
+    </script>
+</body>
+</html>
