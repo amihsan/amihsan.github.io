@@ -141,7 +141,7 @@
 </html> -->
 
 
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -237,6 +237,179 @@
             <p>Here you can find all my public repositories. <a href="https://github.com/amihsan?tab=repositories"><i
                         style="color: #0366d6;" class="fab fa-github"></i> View repositories at Github</a>.</p>
             <p class="github-link">Visit <a href="https://github.com/amihsan"><i style="color: #0366d6;"
+                        class="fab fa-github"></i> my GitHub profile</a>.</p>
+        </div>
+        <ul id="repos-list"></ul>
+    </div>
+
+    <script>
+        // Function to save the order of repositories to local storage
+        function saveRepoOrder() {
+            const repoOrder = Array.from(repoList.children).map(li => li.textContent.trim());
+            localStorage.setItem('repoOrder', JSON.stringify(repoOrder));
+        }
+
+        // Function to retrieve the order of repositories from local storage
+        function loadRepoOrder() {
+            const repoOrder = JSON.parse(localStorage.getItem('repoOrder'));
+            if (repoOrder) {
+                repoOrder.forEach(repoName => {
+                    const repoItem = Array.from(repoList.children).find(li => li.textContent.trim() === repoName);
+                    if (repoItem) {
+                        repoList.appendChild(repoItem);
+                    }
+                });
+            }
+        }
+
+        const repoList = document.getElementById('repos-list');
+
+        fetch('https://api.github.com/users/amihsan/repos')
+            .then(response => response.json())
+            .then(data => {
+                data.forEach(repo => {
+                    const listItem = document.createElement('li');
+                    const title = document.createElement('h2');
+                    const description = document.createElement('p');
+                    const link = document.createElement('a');
+                    title.textContent = repo.name;
+                    description.textContent = repo.description || 'No description available.';
+                    link.href = repo.html_url;
+                    link.textContent = 'View on GitHub';
+                    title.classList.add('repo-title');
+                    description.classList.add('repo-description');
+                    listItem.appendChild(title);
+                    listItem.appendChild(description);
+                    listItem.appendChild(link);
+                    repoList.appendChild(listItem);
+                });
+
+                // Load the repository order from local storage
+                loadRepoOrder();
+
+                // Enable drag-and-drop functionality
+                const sortable = new Sortable(repoList, {
+                    animation: 150,
+                    onEnd: function (evt) {
+                        // Save the new order of repositories to local storage
+                        saveRepoOrder();
+                    }
+                });
+            })
+            .catch(error => console.error('Error fetching repos:', error));
+    </script>
+
+</body>
+
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amimul Ihsan | Public Repositories</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #f4f4f9;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 30px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(10px);
+        }
+
+        .welcome {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .welcome h2 {
+            color: #f4f4f9;
+            font-size: 28px;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .welcome p {
+            font-size: 16px;
+        }
+
+        .github-link {
+            margin-top: 25px;
+            font-size: 18px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        li:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+            transform: translateY(-5px);
+        }
+
+        h2.repo-title {
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 22px;
+            color: #00aaff;
+            font-weight: 600;
+        }
+
+        p.repo-description {
+            margin-top: 0;
+            color: #ddd;
+            font-size: 14px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #00aaff;
+            font-weight: 600;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.14.0/Sortable.min.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="welcome">
+            <h2><i style="color: #00aaff;" class="far fa-smile-wink"></i> Welcome, <span id="username">Amimul
+                    Ihsan</span>! <i style="color: #00aaff;" class="far fa-smile-wink"></i></h2>
+            <p>Here you can find all my public repositories. <a href="https://github.com/amihsan?tab=repositories"><i
+                        style="color: #00aaff;" class="fab fa-github"></i> View repositories at Github</a>.</p>
+            <p class="github-link">Visit <a href="https://github.com/amihsan"><i style="color: #00aaff;"
                         class="fab fa-github"></i> my GitHub profile</a>.</p>
         </div>
         <ul id="repos-list"></ul>
